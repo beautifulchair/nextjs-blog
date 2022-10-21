@@ -1,6 +1,7 @@
 import Layout from '../../components/layout';
 import { getAllPostsId, getPostData } from '../../lib/posts';
 import Head from 'next/head';
+import Date from '../../components/date';
 
 export default function Post({ postData }) {
     return (
@@ -8,6 +9,7 @@ export default function Post({ postData }) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
+            <Date dateString={postData.date} />
             <br />
             {postData.id}
             <br />
